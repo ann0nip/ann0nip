@@ -1,5 +1,6 @@
-import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material';
+import Switch from '@mui/material/Switch';
+
 import Header from '../components/header/header.component';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };

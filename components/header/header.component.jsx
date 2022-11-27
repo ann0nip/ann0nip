@@ -1,27 +1,31 @@
 import * as React from 'react';
+
+import MenuIcon from '@mui/icons-material/Menu';
+import { styled } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import { styled } from '@mui/material';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-const pages = ['Ask Me Anything', 'Works', 'Links'];
+const pages = [
+    { title: 'Ask Me Anything', url: 'ask-me-anything' },
+    { title: 'Works', url: 'works' },
+    { title: 'Links', url: 'links' },
+];
 
-export const HeaderLink = styled(Button)(({ theme }) => {
+export const HeaderLink = styled(Link)(({ theme }) => {
     const { getContrastText, primary } = theme.palette;
     return {
-        my: 2,
         color: getContrastText(primary.main),
         display: 'block',
+        margin: '0 10px',
+        padding: '10px',
         '&:hover': {
             backgroundColor: primary.light,
         },
@@ -29,22 +33,19 @@ export const HeaderLink = styled(Button)(({ theme }) => {
 });
 
 function Header() {
+    const router = useRouter();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
     };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
+    const handleClickNavMenu = (href) => {
+        router.push(href);
     };
 
     return (
@@ -78,8 +79,8 @@ function Header() {
                         }}
                     >
                         {pages.map((page) => (
-                            <HeaderLink key={page} disableRipple>
-                                {page}
+                            <HeaderLink key={page.url} href={page.url}>
+                                {page.title}
                             </HeaderLink>
                         ))}
                     </Box>
@@ -122,12 +123,12 @@ function Header() {
                         </IconButton>
                         <Menu
                             id="menu-appbar"
+                            keepMounted
                             anchorEl={anchorElNav}
                             anchorOrigin={{
                                 vertical: 'bottom',
                                 horizontal: 'left',
                             }}
-                            keepMounted
                             transformOrigin={{
                                 vertical: 'top',
                                 horizontal: 'left',
@@ -136,15 +137,16 @@ function Header() {
                             onClose={handleCloseNavMenu}
                             sx={{
                                 display: { xs: 'block', md: 'none' },
+                                top: 5,
                             }}
                         >
                             {pages.map((page) => (
                                 <MenuItem
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
+                                    key={page.url}
+                                    onClick={() => handleClickNavMenu(page.url)}
                                 >
                                     <Typography textAlign="center">
-                                        {page}
+                                        {page.title}
                                     </Typography>
                                 </MenuItem>
                             ))}
