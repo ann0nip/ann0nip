@@ -49,7 +49,7 @@ function Header() {
     };
 
     return (
-        <AppBar position="static" elevation={0}>
+        <AppBar position="sticky" elevation={0} sx={{ opacity: '0.98' }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Start Desktop view */}
@@ -122,15 +122,14 @@ function Header() {
                             <MenuIcon />
                         </IconButton>
                         <Menu
+                            MenuListProps={{
+                                style: { padding: 0, backgroundColor: '#FFF' },
+                            }}
                             id="menu-appbar"
                             keepMounted
                             anchorEl={anchorElNav}
                             anchorOrigin={{
                                 vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            transformOrigin={{
-                                vertical: 'top',
                                 horizontal: 'left',
                             }}
                             open={Boolean(anchorElNav)}
@@ -144,6 +143,7 @@ function Header() {
                                 <MenuItem
                                     key={page.url}
                                     onClick={() => handleClickNavMenu(page.url)}
+                                    sx={{}}
                                 >
                                     <Typography textAlign="center">
                                         {page.title}

@@ -1,8 +1,17 @@
-import { Box, Grid, MenuItem, Typography, styled } from '@mui/material';
+import {
+    Box,
+    Divider,
+    Grid,
+    MenuItem,
+    Typography,
+    styled,
+} from '@mui/material';
 import Image from 'next/image';
 
 import Header from '../components/header/header.component';
-import ImageLanding from '../styles/assets/IMG_2855.png';
+import memojiHey from '../styles/assets/IMG_2854.png';
+import memojiComputer from '../styles/assets/IMG_2855.png';
+import greenStain from '../styles/assets/splat.svg';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
@@ -19,13 +28,14 @@ export const Container = styled('div')(({ theme }) => {
 
 export const Landing = () => {
     return (
-        <Box>
-            <Grid container sx={{ paddingX: { xs: '0rem', md: '6rem' } }}>
+        <Box sx={{ paddingX: { xs: '0rem', md: '6rem' } }}>
+            <Grid container>
                 <Grid
+                    item
                     xs={12}
                     md={6}
                     sx={{
-                        padding: { xs: '2rem', md: '6rem' },
+                        padding: { xs: '0 2rem', md: '6rem' },
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
@@ -40,10 +50,26 @@ export const Landing = () => {
                             fontWeight: 600,
                             fontSize: '3rem',
                             textAlign: { xs: 'center' },
+                            display: { xs: 'none', md: 'block' },
                         }}
                     >
                         Hi there 👋
                     </Typography>
+
+                    <Box
+                        sx={{
+                            display: { xs: 'block', md: 'none' },
+                            marginLeft: '-2rem',
+                        }}
+                    >
+                        <Image
+                            src={memojiHey}
+                            width="160"
+                            alt="Memoji Salute"
+                            priority
+                        />
+                        <Divider sx={{ margin: { xs: '-5px 0 0 -2rem' } }} />
+                    </Box>
                     <Typography
                         gutterBottom
                         variant="body1"
@@ -51,10 +77,11 @@ export const Landing = () => {
                         sx={{
                             fontWeight: 500,
                             fontSize: { xs: '1rem', md: '1.2rem' },
+                            marginTop: { xs: '1rem' },
                         }}
                     >
                         I'm Juan Martin Gimenez, a passionate individual who
-                        currently works as a Front-end developer.
+                        works as a Front-end developer.
                     </Typography>
                     <Typography
                         gutterBottom
@@ -66,8 +93,20 @@ export const Landing = () => {
                         }}
                     >
                         I fell in love with technology, programming, and
-                        business. I still don't know my destiny in life,
-                        although I pursue it, or so I think 🧭
+                        business. However, I'm still looking for new challenges
+                        🧭
+                    </Typography>
+                    <Typography
+                        gutterBottom
+                        variant="body1"
+                        color="secondary"
+                        sx={{
+                            fontWeight: 500,
+                            fontSize: { xs: '1rem', md: '1.2rem' },
+                        }}
+                    >
+                        My field of Interest's building web products with Modern
+                        Javascript Library and Frameworks.
                     </Typography>
                     <Typography
                         variant="body1"
@@ -77,12 +116,11 @@ export const Landing = () => {
                             fontSize: { xs: '1rem', md: '1.2rem' },
                         }}
                     >
-                        My field of Interest's are building web products with
-                        Modern Javascript Library and Frameworks. Crypto
-                        Enthusiastic, Life curious learner, traveler.
+                        Crypto Enthusiastic, Life curious learner, traveler.
                     </Typography>
                 </Grid>
                 <Grid
+                    item
                     xs={12}
                     md={6}
                     sx={{
@@ -90,9 +128,15 @@ export const Landing = () => {
                         flexDirection: 'column',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        backgroundImage: `url(${greenStain.src})`,
+                        backgroundRepeat: 'no-repeat',
                     }}
                 >
-                    <Image src={ImageLanding} />
+                    <Image
+                        src={memojiComputer}
+                        alt="Memoji Computer"
+                        priority
+                    />
                 </Grid>
             </Grid>
         </Box>
