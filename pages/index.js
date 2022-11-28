@@ -2,8 +2,8 @@ import { Box, Divider, Grid, Typography, styled } from '@mui/material';
 import Image from 'next/image';
 
 import Header from '../components/header/header.component';
-import memojiHey from '../styles/assets/IMG_2854.png';
-import memojiComputer from '../styles/assets/IMG_2855.png';
+import memojiHey from '../styles/assets/image_2854.png';
+import memojiComputer from '../styles/assets/image_2855.png';
 import greenStain from '../styles/assets/splat.svg';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
