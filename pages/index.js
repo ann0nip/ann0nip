@@ -1,11 +1,4 @@
-import {
-    Box,
-    Divider,
-    Grid,
-    MenuItem,
-    Typography,
-    styled,
-} from '@mui/material';
+import { Box, Divider, Grid, Typography, styled } from '@mui/material';
 import Image from 'next/image';
 
 import Header from '../components/header/header.component';
@@ -80,8 +73,8 @@ export const Landing = () => {
                             marginTop: { xs: '1rem' },
                         }}
                     >
-                        I'm Juan Martin Gimenez, a passionate individual who
-                        works as a Front-end developer.
+                        I&apos;m Juan Martin Gimenez, a passionate individual
+                        who works as a Front-end developer.
                     </Typography>
                     <Typography
                         gutterBottom
@@ -93,8 +86,8 @@ export const Landing = () => {
                         }}
                     >
                         I fell in love with technology, programming, and
-                        business. However, I'm still looking for new challenges
-                        🧭
+                        business. However, I&apos;m still looking for new
+                        challenges 🧭
                     </Typography>
                     <Typography
                         gutterBottom
@@ -105,8 +98,8 @@ export const Landing = () => {
                             fontSize: { xs: '1rem', md: '1.2rem' },
                         }}
                     >
-                        My field of Interest's building web products with Modern
-                        Javascript Library and Frameworks.
+                        My field of Interest&apos;s building web products with
+                        Modern Javascript Library and Frameworks.
                     </Typography>
                     <Typography
                         variant="body1"
