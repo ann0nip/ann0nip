@@ -12,4 +12,7 @@ export const theme = createTheme({
         },
         background: '#EDF8FF',
     },
+    typography: {
+        fontFamily: ['Montserrat', 'sans-serif'].join(','),
+    },
 });

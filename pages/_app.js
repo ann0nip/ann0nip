@@ -1,3 +1,4 @@
+import '@fontsource/montserrat';
 import { ThemeProvider } from '@mui/material';
 
 import '../styles/globals.css';
