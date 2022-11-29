@@ -1,3 +1,6 @@
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Box, Divider, Grid, Typography, styled } from '@mui/material';
 import Image from 'next/image';
 
@@ -52,15 +55,79 @@ export const Landing = () => {
                     <Box
                         sx={{
                             display: { xs: 'block', md: 'none' },
-                            marginLeft: '-2rem',
                         }}
                     >
-                        <Image
-                            src={memojiHey}
-                            width="160"
-                            alt="Memoji Salute"
-                            priority
-                        />
+                        <Grid
+                            container
+                            sx={{ justifyContent: 'space-between' }}
+                        >
+                            <Grid
+                                item
+                                xs={6}
+                                sx={{
+                                    marginLeft: '-2rem',
+                                }}
+                            >
+                                <Image
+                                    src={memojiHey}
+                                    width="160"
+                                    alt="Memoji Salute"
+                                    priority
+                                />
+                            </Grid>
+                            <Grid
+                                item
+                                xs={6}
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                }}
+                            >
+                                <Typography
+                                    variant="overline"
+                                    color={'primary.dark'}
+                                    gutterBottom
+                                >
+                                    FIND ME ON
+                                </Typography>
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        width: '100%',
+                                        justifyContent: 'space-around',
+                                    }}
+                                >
+                                    <a href="https://www.linkedin.com/in/ann0nip">
+                                        <LinkedInIcon
+                                            sx={{
+                                                transform: 'scale(1.5)',
+                                                fill: '#0077B5',
+                                            }}
+                                        />
+                                    </a>
+                                    <a href="https://www.github.com/ann0nip">
+                                        {' '}
+                                        <GitHubIcon
+                                            sx={{
+                                                transform: 'scale(1.5)',
+                                                fill: '#333',
+                                            }}
+                                        />
+                                    </a>
+                                    <a href="https://www.instagram.com/ann0nip">
+                                        <InstagramIcon
+                                            sx={{
+                                                transform: 'scale(1.5)',
+                                                fill: '#E1306C',
+                                            }}
+                                        />
+                                    </a>
+                                </Box>
+                            </Grid>
+                        </Grid>
+
                         <Divider sx={{ margin: { xs: '-5px 0 0 -2rem' } }} />
                     </Box>
                     <Typography
