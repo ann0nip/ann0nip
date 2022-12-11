@@ -15,7 +15,7 @@ import { useRouter } from 'next/router';
 
 const pages = [
     { title: 'Ask Me Anything', url: 'ask-me-anything' },
-    { title: 'Works', url: 'works' },
+    { title: 'Cripto Calc', url: 'cripto-calc' },
     { title: 'Links', url: 'links' },
 ];
 

@@ -153,8 +153,7 @@ export const Landing = () => {
                         }}
                     >
                         I fell in love with technology, programming, and
-                        business. However, I&apos;m still looking for new
-                        challenges 🧭
+                        business.
                     </Typography>
                     <Typography
                         gutterBottom
@@ -165,7 +164,7 @@ export const Landing = () => {
                             fontSize: { xs: '1rem', md: '1.2rem' },
                         }}
                     >
-                        My field of Interest&apos;s building web products with
+                        My field of interest is building web products with
                         Modern Javascript Library and Frameworks.
                     </Typography>
                     <Typography
@@ -176,7 +175,7 @@ export const Landing = () => {
                             fontSize: { xs: '1rem', md: '1.2rem' },
                         }}
                     >
-                        Crypto Enthusiastic, Life curious learner, traveler.
+                        Crypto Enthusiastic · Life Curious Learner · Traveler.
                     </Typography>
                 </Grid>
                 <Grid
