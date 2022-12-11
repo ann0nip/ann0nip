@@ -24,7 +24,7 @@ export const Container = styled('div')(({ theme }) => {
 
 export const Landing = () => {
     return (
-        <Box sx={{ paddingX: { xs: '0rem', md: '6rem' } }}>
+        <Container sx={{ paddingX: { xs: '0rem', md: '6rem' } }}>
             <Grid container>
                 <Grid
                     item
@@ -198,7 +198,7 @@ export const Landing = () => {
                     />
                 </Grid>
             </Grid>
-        </Box>
+        </Container>
     );
 };
 

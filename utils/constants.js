@@ -1,7 +1,7 @@
 export const BTC_EXCHANGES = [
     { label: 'ArgenBTC', ticker: 'argenbtc' },
     { label: 'belo', ticker: 'belo' },
-    { label: 'Binance P2P', ticker: 'binancep2p' },
+    // { label: 'Binance P2P', ticker: 'binancep2p' },
     { label: 'Bitex', ticker: 'bitex' },
     { label: 'Bitmonedero', ticker: 'bitmonedero' },
     { label: 'Bitso', ticker: 'bitso' },
@@ -24,9 +24,5 @@ export const BTC_EXCHANGES = [
     { label: 'Ripio Trade', ticker: 'ripiotrade' },
     { label: 'Saldo', ticker: 'saldo' },
     { label: 'SatoshiTango', ticker: 'satoshitango' },
-    { label: 'TiendaCrypto', ticker: 'tiendacrypto' },
-    { label: 'Calypso P2P', ticker: 'calypsop2p' },
-    { label: 'Decrypto', ticker: 'decrypto' },
-    { label: 'Fiwind', ticker: 'fiwind' },
     { label: 'TiendaCrypto', ticker: 'tiendacrypto' },
 ];
