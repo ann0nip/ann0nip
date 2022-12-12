@@ -39,14 +39,17 @@ const CryptoTable = ({ data, headers = [], amount }) => {
     return (
         <TableContainer
             component={Paper}
-            sx={{ maxHeight: 440, maxWidth: 700 }}
+            sx={{ maxHeight: 440, minWidth: 358 }}
+            md={{ maxWidth: 700 }}
         >
             <Table aria-label="crypto table">
                 <TableHead>
                     <TableRow>
                         {headers.map((header) => (
                             <StyledTableCell align="left" key={header}>
-                                <Typography variant="h6">{header}</Typography>
+                                <Typography variant="subtitle1">
+                                    {header}
+                                </Typography>
                             </StyledTableCell>
                         ))}
                     </TableRow>

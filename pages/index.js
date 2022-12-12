@@ -13,12 +13,12 @@ const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 export const Container = styled('div')(({ theme }) => {
     const { secondary, background } = theme.palette;
-
+    console.log(theme);
     return {
         display: 'flex',
         flexDirection: 'column',
         height: '100vh',
-        backgroundColor: background,
+        backgroundColor: background.main,
     };
 });
 

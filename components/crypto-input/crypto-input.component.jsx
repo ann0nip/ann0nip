@@ -14,7 +14,10 @@ const BitcoinIcon = styled(CurrencyBitcoinIcon)((props) => {
 });
 const CryptoInput = ({ value, handleChange }) => (
     <FormControl
-        sx={{ paddingX: '1rem', marginBottom: '1rem' }}
+        sx={{
+            paddingX: '1rem',
+            marginBottom: '1rem',
+        }}
         fullWidth
         variant="standard"
     >
