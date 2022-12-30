@@ -108,7 +108,11 @@ const CriptoCalc = () => {
                         md={6}
                         textAlign="center"
                     >
-                        <Typography variant="h4" gutterBottom>
+                        <Typography
+                            color="secondary.light"
+                            variant="h4"
+                            gutterBottom
+                        >
                             VENDER Bitcoin x ARS
                         </Typography>
                         <CryptoInput
@@ -129,7 +133,11 @@ const CriptoCalc = () => {
                         md={6}
                         textAlign="center"
                     >
-                        <Typography variant="h4" gutterBottom>
+                        <Typography
+                            variant="h4"
+                            gutterBottom
+                            color="secondary.light"
+                        >
                             VENDER Stable x ARS
                         </Typography>
                         <CryptoInput

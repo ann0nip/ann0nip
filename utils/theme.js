@@ -18,7 +18,9 @@ export const theme = createTheme({
             main: '#21B04B',
             light: '#81C784',
         },
-        background: '#EDF8FF',
+        background: {
+            main: '#F4F4F4',
+        },
     },
     typography: {
         fontFamily: ['Montserrat', 'sans-serif'].join(','),
