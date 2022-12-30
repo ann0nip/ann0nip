@@ -11,6 +11,7 @@ export const formatPrice = (price) => {
 };
 
 export const getExchangeName = (exchange) => {
+    console.log(exchange);
     const exchangeObj = BTC_EXCHANGES.find(
         (el) => el.ticker === exchange.ticker,
     );

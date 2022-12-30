@@ -14,9 +14,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const pages = [
-    { title: 'Ask Me Anything', url: 'ask-me-anything' },
+    // { title: 'Ask Me Anything', url: 'ask-me-anything' },
     { title: 'Cripto Calc', url: 'cripto-calc' },
-    { title: 'Links', url: 'links' },
+    // { title: 'Links', url: 'links' },
 ];
 
 export const HeaderLink = styled(Link)(({ theme }) => {

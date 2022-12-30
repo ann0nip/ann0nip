@@ -1,3 +1,4 @@
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 import {
     FormControl,
@@ -12,9 +13,9 @@ const BitcoinIcon = styled(CurrencyBitcoinIcon)((props) => {
         color: props.theme.palette.primary.dark,
     };
 });
-const CryptoInput = ({ value, handleChange }) => (
+const CryptoInput = ({ value, handleChange, isBtc }) => (
     <FormControl
-        sx={{ paddingX: '1rem', marginBottom: '1rem' }}
+        sx={{ paddingX: '0rem', marginBottom: '1rem' }}
         fullWidth
         variant="standard"
     >
@@ -26,7 +27,7 @@ const CryptoInput = ({ value, handleChange }) => (
             onChange={handleChange}
             startAdornment={
                 <InputAdornment position="start">
-                    <BitcoinIcon />
+                    {isBtc ? <BitcoinIcon /> : <AttachMoneyIcon />}
                 </InputAdornment>
             }
         />

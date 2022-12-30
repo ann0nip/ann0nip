@@ -35,12 +35,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     },
 }));
 
-const CryptoTable = ({ data, headers = [], amount }) => {
+const CryptoTable = ({ data = [], headers = [], amount }) => {
     return (
-        <TableContainer
-            component={Paper}
-            sx={{ maxHeight: 440, maxWidth: 700 }}
-        >
+        <TableContainer component={Paper} sx={{ maxHeight: 440 }}>
             <Table aria-label="crypto table">
                 <TableHead>
                     <TableRow>
