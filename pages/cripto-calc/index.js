@@ -92,7 +92,10 @@ const CriptoCalc = () => {
         <Container>
             <Header />
             <Container
-                sx={{ paddingX: { xs: '0rem', md: '6rem' }, marginTop: '5rem' }}
+                sx={{
+                    paddingX: { xs: '0rem', md: '6rem' },
+                    marginTop: { xs: '0rem', md: '5rem' },
+                }}
             >
                 <Typography
                     variant="h4"
