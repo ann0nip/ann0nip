@@ -95,12 +95,13 @@ const CriptoCalc = () => {
                 sx={{ paddingX: { xs: '0rem', md: '6rem' }, marginTop: '5rem' }}
             >
                 <Typography
-                    variant="h3"
+                    variant="h4"
                     gutterBottom
                     textAlign="center"
                     fontWeight="800"
                 >
-                    El mejor cambio de Bitcoin o BUSD por pesos Argentinos.
+                    Conoce donde se encuentra el mejor cambio de Bitcoin o BUSD
+                    por pesos Argentinos.
                 </Typography>
                 <Grid container>
                     <Grid

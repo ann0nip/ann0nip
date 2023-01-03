@@ -23,6 +23,7 @@ const CryptoInput = ({ value, handleChange, isBtc }) => (
             Cantidad a vender
         </InputLabel>
         <Input
+            type="number"
             value={value}
             onChange={handleChange}
             startAdornment={
