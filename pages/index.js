@@ -17,7 +17,8 @@ export const Container = styled('div')(({ theme }) => {
     return {
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh',
+        height: '100%',
+        marginBottom: '1rem',
         backgroundColor: background.main,
     };
 });
