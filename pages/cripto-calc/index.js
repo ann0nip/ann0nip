@@ -100,8 +100,8 @@ const CriptoCalc = () => {
                     textAlign="center"
                     fontWeight="800"
                 >
-                    Conoce donde se encuentra el mejor cambio de Bitcoin o BUSD
-                    por pesos Argentinos.
+                    Encuentra el mejor precio de venta para Bitcoin o BUSD por
+                    pesos Argentinos.
                 </Typography>
                 <Grid container>
                     <Grid
