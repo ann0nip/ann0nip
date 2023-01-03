@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Grid, Typography } from '@mui/material';
+import { Grid, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import useSWR from 'swr';
 
@@ -100,8 +100,8 @@ const CriptoCalc = () => {
                     textAlign="center"
                     fontWeight="800"
                 >
-                    Encuentra el mejor precio de venta para Bitcoin o BUSD por
-                    pesos Argentinos.
+                    Encuentra el mejor precio de <u>VENTA</u> para Bitcoin o
+                    BUSD por pesos Argentinos.
                 </Typography>
                 <Grid container>
                     <Grid
@@ -116,7 +116,7 @@ const CriptoCalc = () => {
                             variant="h4"
                             gutterBottom
                         >
-                            VENDER Bitcoin x ARS
+                            Bitcoin x ARS
                         </Typography>
                         <CryptoInput
                             isBtc={true}
@@ -141,7 +141,7 @@ const CriptoCalc = () => {
                             gutterBottom
                             color="secondary.light"
                         >
-                            VENDER BUSD x ARS
+                            BUSD x ARS
                         </Typography>
                         <CryptoInput
                             value={amountBUSD}
@@ -155,6 +155,20 @@ const CriptoCalc = () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Paper
+                sx={{
+                    paddingX: { xs: '0rem', md: '6rem' },
+                    textAlign: 'center',
+                }}
+            >
+                <Typography variant="overline">
+                    Made with ☕️ by @Ann0nip - 2023
+                </Typography>
+                <br />
+                <Typography variant="caption">
+                    All the data is pulled from the public CriptoYa API
+                </Typography>
+            </Paper>
         </Container>
     );
 };
