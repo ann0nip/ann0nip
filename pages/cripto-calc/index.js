@@ -30,7 +30,9 @@ const CriptoCalc = () => {
         arrayFetcher,
     );
 
-    const [amount, setAmount] = useState(0);
+    const [amountBTC, setAmountBTC] = useState(0);
+    const [amountBUSD, setAmountBUSD] = useState(0);
+
     const [exchanges, setExchanges] = useState([]);
     const [stableArs, setStableArs] = useState([]);
 
@@ -98,7 +100,7 @@ const CriptoCalc = () => {
                     textAlign="center"
                     fontWeight="800"
                 >
-                    Mejor cambio de Bitcoin o Stable Coin a pesos Argentinos.
+                    El mejor cambio de Bitcoin o BUSD por pesos Argentinos.
                 </Typography>
                 <Grid container>
                     <Grid
@@ -117,13 +119,13 @@ const CriptoCalc = () => {
                         </Typography>
                         <CryptoInput
                             isBtc={true}
-                            value={amount}
-                            handleChange={(e) => setAmount(e.target.value)}
+                            value={amountBTC}
+                            handleChange={(e) => setAmountBTC(e.target.value)}
                         />
                         <CryptoTable
                             data={exchanges}
                             headers={TABLE_HEADERS}
-                            amount={amount}
+                            amount={amountBTC}
                         />
                     </Grid>
                     <Grid
@@ -138,16 +140,16 @@ const CriptoCalc = () => {
                             gutterBottom
                             color="secondary.light"
                         >
-                            VENDER Stable x ARS
+                            VENDER BUSD x ARS
                         </Typography>
                         <CryptoInput
-                            value={amount}
-                            handleChange={(e) => setAmount(e.target.value)}
+                            value={amountBUSD}
+                            handleChange={(e) => setAmountBUSD(e.target.value)}
                         />
                         <CryptoTable
                             data={stableArs}
                             headers={TABLE_HEADERS}
-                            amount={amount}
+                            amount={amountBUSD}
                         />
                     </Grid>
                 </Grid>
