@@ -61,7 +61,10 @@ const CryptoTable = ({ data = [], headers = [], amount }) => {
                             </StyledTableCell>
                             <StyledTableCell>
                                 {amount && '~'}
-                                {formatPrice(exchange.data.totalBid * amount)}
+                                {formatPrice(
+                                    exchange.data.totalBid * amount,
+                                    0,
+                                )}
                             </StyledTableCell>
                         </StyledTableRow>
                     ))}
