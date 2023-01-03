@@ -124,6 +124,7 @@ const CriptoCalc = () => {
                             handleChange={(e) => setAmountBTC(e.target.value)}
                         />
                         <CryptoTable
+                            dataType="BTC"
                             data={exchanges}
                             headers={TABLE_HEADERS}
                             amount={amountBTC}
@@ -148,6 +149,7 @@ const CriptoCalc = () => {
                             handleChange={(e) => setAmountBUSD(e.target.value)}
                         />
                         <CryptoTable
+                            dataType="BUSD"
                             data={stableArs}
                             headers={TABLE_HEADERS}
                             amount={amountBUSD}

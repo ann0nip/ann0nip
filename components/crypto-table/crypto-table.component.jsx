@@ -35,7 +35,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     },
 }));
 
-const CryptoTable = ({ data = [], headers = [], amount }) => {
+const CryptoTable = ({ data = [], headers = [], amount, dataType }) => {
     return (
         <TableContainer component={Paper} sx={{ maxHeight: 440 }}>
             <Table aria-label="crypto table">
@@ -57,14 +57,20 @@ const CryptoTable = ({ data = [], headers = [], amount }) => {
                                 {getExchangeName(exchange)}
                             </StyledTableCell>
                             <StyledTableCell>
-                                {formatPrice(exchange.data.totalBid)}
+                                {dataType === 'BTC'
+                                    ? formatPrice(exchange.data.totalBid, 0)
+                                    : formatPrice(exchange.data.totalBid)}
                             </StyledTableCell>
                             <StyledTableCell>
                                 {amount && '~'}
-                                {formatPrice(
-                                    exchange.data.totalBid * amount,
-                                    0,
-                                )}
+                                {dataType === 'BTC'
+                                    ? formatPrice(
+                                          exchange.data.totalBid * amount,
+                                          0,
+                                      )
+                                    : formatPrice(
+                                          exchange.data.totalBid * amount,
+                                      )}
                             </StyledTableCell>
                         </StyledTableRow>
                     ))}
