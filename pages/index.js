@@ -18,7 +18,6 @@ export const Container = styled('div')(({ theme }) => {
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
-        marginBottom: '1rem',
         backgroundColor: background.main,
     };
 });

@@ -109,7 +109,7 @@ const CriptoCalc = () => {
                 <Grid container>
                     <Grid
                         item
-                        sx={{ padding: '1rem', marginTop: '1rem' }}
+                        sx={{ padding: '1rem', margin: '1rem 0' }}
                         xs={12}
                         md={6}
                         textAlign="center"
@@ -161,6 +161,8 @@ const CriptoCalc = () => {
                 </Grid>
             </Container>
             <Paper
+                variant="outlined"
+                elevation={0}
                 sx={{
                     paddingX: { xs: '0rem', md: '6rem' },
                     textAlign: 'center',
