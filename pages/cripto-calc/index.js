@@ -94,7 +94,7 @@ const CriptoCalc = () => {
             <Container
                 sx={{
                     paddingX: { xs: '0rem', md: '6rem' },
-                    marginTop: { xs: '0rem', md: '5rem' },
+                    marginTop: { xs: '1rem', md: '5rem' },
                 }}
             >
                 <Typography
@@ -102,6 +102,7 @@ const CriptoCalc = () => {
                     gutterBottom
                     textAlign="center"
                     fontWeight="800"
+                    color="secondary.dark"
                 >
                     Encuentra el mejor precio de <u>VENTA</u> para Bitcoin o
                     BUSD por pesos Argentinos.
@@ -164,6 +165,7 @@ const CriptoCalc = () => {
                 variant="outlined"
                 elevation={0}
                 sx={{
+                    paddingY: '0.5rem',
                     paddingX: { xs: '0rem', md: '6rem' },
                     textAlign: 'center',
                 }}

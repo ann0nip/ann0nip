@@ -22,6 +22,8 @@ const pages = [
 export const HeaderLink = styled(Link)(({ theme }) => {
     const { getContrastText, primary } = theme.palette;
     return {
+        fontFamily: 'Montserrat',
+        fontWeight: 'bold',
         color: getContrastText(primary.main),
         display: 'block',
         margin: '0 10px',
